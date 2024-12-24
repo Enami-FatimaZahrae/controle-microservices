@@ -1,0 +1,11 @@
+server:
+ port: 8888  # Port du serveur de configuration
+
+spring:
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/Enami-FatimaZahrae/config-repository  # URL de votre dépôt Git
+      searchPaths: '{application}'  # Cherche les fichiers en fonction du nom du microservice (ex: product-service.yml)
+       clone-on-start: true  # Clone le dépôt au démarrage

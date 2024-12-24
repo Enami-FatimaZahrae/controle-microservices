@@ -1,0 +1,24 @@
+type Query {
+    getAllProducts: [ProductResponse]
+}
+
+type Mutation {
+    createProduct(productRequest: ProductRequestInput): Boolean
+    updateProduct(id: ID!, productRequest: ProductRequestInput): Boolean
+    deleteProduct(id: ID!): Boolean
+}
+
+input ProductRequestInput {
+    name: String
+    description: String
+    price: Float
+    quantity: Int
+}
+
+type ProductResponse {
+    id: ID
+    name: String
+    description: String
+    price: Float
+    quantity: Int
+}
